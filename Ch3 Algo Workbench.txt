@@ -1,0 +1,51 @@
+Algo Workbench
+4.
+
+if score >= A_score:
+print('Your grade is A.')
+else:
+if score >= B_score:
+print('Your grade is B.')
+else:
+if score >= C_score:
+print('Your grade is C.')
+else:
+if score >= D_score:
+print('Your grade is D.')
+else:
+print('Your grade is F.')
+
+These lines of code do not have proper indentations
+
+if score >= A_score:
+	print('Your grade is A.')
+else:
+	if score >= B_score:
+		print('Your grade is B.')
+	else:
+		if score >= C_score:
+			print('Your grade is C.')
+		else:
+			if score >= D_score:
+				print('Your grade is D.')
+			else:
+				print('Your grade is F.')
+
+We indent the code to make it easier to see where we start our if else statements and how they progress with the letter grades getting lower.
+
+5.
+# First we will have the user defined the two amounts
+amount1 = float(input("Enter the 1st amount."))
+amount2 = float(input("Enter the 2nd amount."))
+
+# Now we must check the conditions
+if amount1 > 10 and amount2 <100
+	if amount1 > amount2
+		print(f"The greater amount is: {amount1}")
+	else:
+		print(f"the greater amount is: {amount2}")
+	# this will display the greater of the two
+else:
+	print("conditions are not met.")
+	# This will display if amount1 is less than 10 or amount2 is greater than 100
+
