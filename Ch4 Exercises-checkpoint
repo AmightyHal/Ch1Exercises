@@ -1,13 +1,11 @@
 {
  "cells": [
   {
-   "cell_type": "code",
-   "execution_count": 1,
-   "id": "14575d49-677b-4a98-92da-1f1e09df5418",
+   "cell_type": "markdown",
+   "id": "37c91825-42e8-415e-b77b-f94968fb0c89",
    "metadata": {
     "tags": []
    },
-   "outputs": [],
    "source": [
     "## Ch4 Exercises\n",
     "\n",
