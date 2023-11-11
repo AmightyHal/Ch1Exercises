@@ -69,3 +69,72 @@ input_filename = 'numbers.txt'  # Change this to your actual filename
 # Call the function to display all numbers from the file
 display_numbers_from_file(input_filename)
 
+# ex 6
+# Function to calculate the average of numbers in a file
+def average_of_numbers_in_file(file_name):
+    try:
+        # Open the file in read mode ('r')
+        with open(file_name, 'r') as f:
+            # Read the numbers from the file, split them, and convert to integers
+            numbers = [int(num) for num in f.read().split()]
+
+            # Calculate the sum of numbers
+            sum_of_numbers = sum(numbers)
+
+            # Calculate the average of numbers
+            avg_of_numbers = sum_of_numbers / len(numbers)
+
+            # Return the calculated average
+            return avg_of_numbers
+    except FileNotFoundError:
+        # Handle the case where the file is not found
+        print(f"The file: {file_name} was not found.")
+    except Exception as e:
+        # Handle other exceptions and print an error message
+        print(f"An error occurred: {str(e)}")
+
+# Calculate the average from the file
+average = average_of_numbers_in_file("numbers.txt")
+
+# Check if the average is calculated successfully before printing
+if average is not None:
+    # Print the calculated average
+    print(f"The average of all numbers in the file is: {average}")
+
+# ex 9
+# Function to calculate the average of numbers in a file
+def average_of_numbers_in_file(file_name):
+    try:
+        # Open the file in read mode ('r')
+        with open(file_name, 'r') as f:
+            # Read the numbers from the file, split them, and convert to integers
+            numbers = [int(num) for num in f.read().split()]
+
+            # Calculate the sum of numbers
+            sum_of_numbers = sum(numbers)
+
+            # Calculate the average of numbers
+            avg_of_numbers = sum_of_numbers / len(numbers)
+
+            # Return the calculated average
+            return avg_of_numbers
+
+    except FileNotFoundError:
+        # Handle the case where the file is not found
+        print(f"The file: {file_name} was not found.")
+
+    except ValueError:
+        # Handle the case where items from the file cannot be converted to a number
+        print(f"Error: Cannot convert items from the file to a number.")
+
+    except Exception as e:
+        # Handle other exceptions and print an error message
+        print(f"An error occurred: {str(e)}")
+
+# Calculate the average from the file
+average = average_of_numbers_in_file("numbers.txt")
+
+# Check if the average is calculated successfully before printing
+if average is not None:
+    # Print the calculated average
+    print(f"The average of all numbers in the file is: {average}")
