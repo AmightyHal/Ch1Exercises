@@ -138,3 +138,52 @@ average = average_of_numbers_in_file("numbers.txt")
 if average is not None:
     # Print the calculated average
     print(f"The average of all numbers in the file is: {average}")
+
+# ex 12
+# Function to calculate and display average steps for each month
+def calculate_monthly_averages(filename):
+    try:
+        # Open the file in read mode ('r')
+        with open(filename, 'r') as file:
+            # Read all lines from the file
+            lines = file.readlines()
+
+            # Initialize lists to store monthly totals and counts
+            monthly_totals = [0] * 12  # Assuming 12 months in a year
+            monthly_counts = [0] * 12
+
+            # Iterate through each line and update monthly totals and counts
+            for day, line in enumerate(lines, start=1):
+                # Extract the number of steps for the day
+                steps = int(line)
+
+                # Determine the month based on the day
+                month = (day - 1) // 30  # Assuming an average of 30 days per month
+
+                # Update monthly totals and counts
+                monthly_totals[month] += steps
+                monthly_counts[month] += 1
+
+            # Calculate and display the average steps for each month
+            for month, total, count in zip(range(1, 13), monthly_totals, monthly_counts):
+                if count > 0:
+                    average_steps = total / count
+                    print(f"Month {month}: Average steps = {average_steps:.2f}")
+                else:
+                    print(f"Month {month}: No data available")
+
+    except FileNotFoundError:
+        # Handle the case where the file is not found
+        print(f"The file {filename} was not found.")
+    except ValueError:
+        # Handle the case where steps data cannot be converted to an integer
+        print("Error: Unable to convert steps to an integer.")
+    except Exception as e:
+        # Handle other exceptions and print an error message
+        print(f"An error occurred: {str(e)}")
+
+# Specify the filename to read from
+input_filename = 'steps_data.txt'  # Change this to your actual filename
+
+# Call the function to calculate and display monthly averages
+calculate_monthly_averages(input_filename)
