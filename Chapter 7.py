@@ -63,3 +63,21 @@ def plot_pie_chart(expenses):
 
     # Display the pie chart
     plt.show()
+def main():
+    # Specify the path to your expenses file
+    file_path = 'expenses.txt'
+
+    # Read expenses from the file
+    expenses = read_expenses_file(file_path)
+
+    # Plot a pie chart based on the expenses
+    plot_pie_chart(expenses)
+def main():
+    # Specify the path to your expenses file
+    file_path = 'expenses.txt'
+
+    # Read expenses from the file
+    expenses = read_expenses_file(file_path)
+
+# Plot a pie chart based on the expenses
+plot_pie_chart(expenses)
