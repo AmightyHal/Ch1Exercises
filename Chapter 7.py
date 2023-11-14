@@ -159,4 +159,14 @@ def analyze_numbers(numbers):
     print(f"Highest number: {highest_number}")
     print(f"Total of the numbers: {total}")
     print(f"Average of the numbers: {average:.2f}")
+def main():
+    # Get 20 numbers from the user
+    user_numbers = get_user_numbers()
 
+    # Analyze and display the statistics
+    analyze_numbers(user_numbers)
+
+# Entry point of the program
+if __name__ == "__main__":
+    # Call the main function to execute the program
+    main()
