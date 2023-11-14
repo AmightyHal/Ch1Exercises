@@ -38,6 +38,8 @@ calc_weekly_sales()
 # programming exercise 14
 import matplotlib.pyplot as plt
 
+file_path = 'C:\Users\Ethan Meeuwenberg\.ipynb_checkpoints\expenses.txt'
+
 def read_expenses_file(file_path):
     # Initialize an empty dictionary to store expenses
     expenses = {}
@@ -81,3 +83,47 @@ def main():
 
 # Plot a pie chart based on the expenses
 plot_pie_chart(expenses)
+
+# programming exercise 8
+
+file_path = 'C:\Users\Ethan Meeuwenberg\Desktop\BoyNames.txt'
+
+def read_names_from_file(file_path):
+    # Initialize an empty list to store names
+    names = []
+
+    # Open the file and read names
+    with open(file_path, 'r') as file:
+        # Iterate through each line in the file
+        for line in file:
+            # Append each name to the list after removing leading and trailing whitespaces
+            names.append(line.strip())
+     # Return the list containing names
+    return names
+
+def check_popularity(user_name, popular_names):
+    # Check if the user-entered name is among the most popular names
+    if user_name in popular_names:
+        return f"{user_name} is among the most popular baby names!"
+    else:
+        return f"{user_name} is not among the most popular baby names."
+
+def main():
+    # Specify the path to the file containing popular baby names
+    file_path = 'BoyNames.txt'
+
+    # Read names from the file
+    popular_names = read_names_from_file(file_path)
+
+    # Get user input for a name
+    user_input = input("Enter a name to check popularity: ")
+
+    # Check and display the popularity of the entered name
+    result_message = check_popularity(user_input, popular_names)
+    print(result_message)
+
+# Entry point of the program
+if __name__ == "__main__":
+    # Call the main function to execute the program
+    main()
+
