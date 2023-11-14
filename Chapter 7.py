@@ -127,3 +127,23 @@ if __name__ == "__main__":
     # Call the main function to execute the program
     main()
 
+# programming exercise 4
+def get_user_numbers():
+    # Initialize an empty list to store user-entered numbers
+    numbers = []
+
+    # Prompt the user to enter 20 numbers
+    for i in range(20):
+        # Use try-except to handle invalid inputs (non-numeric)
+        while True:
+            try:
+                # Get a number from the user
+                num = float(input(f"Enter number {i+1}: "))
+                # Add the number to the list
+                numbers.append(num)
+                break  # Break the loop if the input is valid
+            except ValueError:
+                # Display an error message for invalid inputs
+                print("Invalid input. Please enter a valid number.")
+
+    return numbers
