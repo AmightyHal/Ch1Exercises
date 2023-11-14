@@ -29,4 +29,7 @@ def calc_weekly_sales():
         # add sales amount to the list
         daily_sales.append(sales)
     # using the sum() function we will calculate total weekly sales
-    
+    total_sales = sum(daily_sales)
+    # now we will display the total sales for the week making sure to only have 2 decimal places
+    print(f"\nTotal sales for the week: ${total_sales:.2f}")
+# 
