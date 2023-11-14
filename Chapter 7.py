@@ -32,4 +32,5 @@ def calc_weekly_sales():
     total_sales = sum(daily_sales)
     # now we will display the total sales for the week making sure to only have 2 decimal places
     print(f"\nTotal sales for the week: ${total_sales:.2f}")
-# 
+# now call the function to run the program
+calc_weekly_sales()
