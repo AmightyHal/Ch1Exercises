@@ -34,3 +34,10 @@ def calc_weekly_sales():
     print(f"\nTotal sales for the week: ${total_sales:.2f}")
 # now call the function to run the program
 calc_weekly_sales()
+
+# programming exercise 14
+import matplotlib.pyplot as plt
+
+def read_expenses_file(file_path):
+    # Initialize an empty dictionary to store expenses
+    expenses = {}
