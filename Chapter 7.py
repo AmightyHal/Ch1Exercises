@@ -51,3 +51,15 @@ def read_expenses_file(C:\Users\Ethan Meeuwenberg\.ipynb_checkpoints\expenses.tx
             expenses[category] = float(amount)
     # Return the dictionary containing expenses
     return expenses
+def plot_pie_chart(expenses):
+    # Extract data for plotting
+    categories = list(expenses.keys())
+    amounts = list(expenses.values())
+
+    # Plotting the pie chart
+    plt.pie(amounts, labels=categories, autopct='%1.1f%%', startangle=140)
+    plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    plt.title('Expense Distribution')
+
+    # Display the pie chart
+    plt.show()
