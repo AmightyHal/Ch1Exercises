@@ -38,6 +38,16 @@ calc_weekly_sales()
 # programming exercise 14
 import matplotlib.pyplot as plt
 
-def read_expenses_file(file_path):
+def read_expenses_file(C:\Users\Ethan Meeuwenberg\.ipynb_checkpoints\expenses.txt):
     # Initialize an empty dictionary to store expenses
     expenses = {}
+    # Open the file and read expenses
+    with open(C:\Users\Ethan Meeuwenberg\.ipynb_checkpoints\expenses.txt, 'r') as file:
+        # Iterate through each line in the file
+        for line in file:
+            # Split the line into category and amount using a comma as a separator
+            category, amount = line.strip().split(',')
+            # Convert the amount to a float and store it in the dictionary
+            expenses[category] = float(amount)
+    # Return the dictionary containing expenses
+    return expenses
