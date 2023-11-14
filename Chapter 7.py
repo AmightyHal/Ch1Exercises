@@ -23,4 +23,10 @@ def calc_weekly_sales():
     # we will need an empty list to store our daily sales in
     daily_sales = []
     # now we will prompt the user to enter sales for every day of the week
-    for day in ['Mon', 'Tues']
+    for day in ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun']:
+        # get sales amount for current day using user input
+        sales = float(input(f"Enter sales for {day}: $"))
+        # add sales amount to the list
+        daily_sales.append(sales)
+    # using the sum() function we will calculate total weekly sales
+    
