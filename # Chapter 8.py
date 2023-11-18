@@ -66,3 +66,10 @@ months = [
 # Print the date in the format we want
 format_date = f"{months[month - 1]} {day}, {year}"
 print("The formatted version of this date is: ", format_date)
+
+# Programming Exercise 10
+# Get a string from the user
+user_input = input("Enter a string: ")
+
+# Create a list to store character frequencies
+char_freq = {}
