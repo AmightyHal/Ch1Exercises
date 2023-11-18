@@ -33,3 +33,11 @@ initials = [name[0].upper() + "." for name in names]
 
 # now we will print the initials and add spaces with .join() method
 print("Initials:", " ".join(initials))
+
+# Programming Exercise 2
+# First we will ask the user to enter a series of single-digit numbers with nothing seperating them
+start_num = input("Enter a series of single digit numbers with nothing seperating them.")
+
+# Define the variable for the sum
+sum_num = 0
+
