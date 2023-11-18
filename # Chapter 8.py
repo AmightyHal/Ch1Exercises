@@ -41,3 +41,13 @@ start_num = input("Enter a series of single digit numbers with nothing seperatin
 # Define the variable for the sum
 sum_num = 0
 
+# Now go through each character in the input string
+for char in start_num:
+    # Make sure what we are looking at is a digit
+    if char.isdigit():
+        # add the digit to the sum
+        sum_num += int(char)
+
+# Now display the sum of the single digit numbers
+print("Sum of single-digit numbers:", sum_num)
+
