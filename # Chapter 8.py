@@ -73,3 +73,13 @@ user_input = input("Enter a string: ")
 
 # Create a list to store character frequencies
 char_freq = {}
+
+# Assign a value to the frequency of characters in the string
+for char in user_input:
+    char_freq[char] = char_freq.get(char, 0) + 1
+
+# Check which character has the maximum frequency
+most_freq_char = max(char_freq, key=char_freq.get)
+
+# Display the most frequent character
+print("The most frequent character is: ", most_freq_char)
