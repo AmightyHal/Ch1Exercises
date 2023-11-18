@@ -51,3 +51,18 @@ for char in start_num:
 # Now display the sum of the single digit numbers
 print("Sum of single-digit numbers:", sum_num)
 
+# Programming Exercise 3
+# Ask for input of a date in the form mm/dd/yyyy
+date_input = input("Enter a date in the format mm/dd/yyyy: ")
+
+# Now seperate the date into month, day, and year
+month, day, year = map(int, date_input.split('/'))
+
+# Make a list including all month names
+months = [
+    "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+]
+
+# Print the date in the format we want
+format_date = f"{months[month - 1]} {day}, {year}"
+print("The formatted version of this date is: ", format_date)
