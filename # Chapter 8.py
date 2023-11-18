@@ -20,3 +20,12 @@ for char in my_string:
 
 # Print final count of space characters
 print("Number of spaces:", space_count)
+
+# Programming Exercise 1
+# First we will ask for the user to input their full name
+full_name = input("Enter your full name: ")
+
+# Now we must split the name using the split() function and add them to a new variable
+names = full_name.split()
+
+# Now we will extract the initals by pulling the first character, 0, and add a "." after each letter
