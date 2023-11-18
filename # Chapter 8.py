@@ -29,3 +29,7 @@ full_name = input("Enter your full name: ")
 names = full_name.split()
 
 # Now we will extract the initals by pulling the first character, 0, and add a "." after each letter
+initials = [name[0].upper() + "." for name in names]
+
+# now we will print the initials and add spaces with .join() method
+print("Initials:", " ".join(initials))
